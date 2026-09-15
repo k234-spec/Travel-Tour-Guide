@@ -5,6 +5,7 @@ import WhyBookWithUs from '../components/WhyBookWithUs';
 import DestinationsSection from '../components/DestinationsSection';
 import PartnerLogoGrid from '../components/PartnerLogoGrid';
 import PackagesSection from '../components/PackagesSection';
+import VisaServicesSection from '../components/VisaServicesSection';
 import ServicesSection from '../components/ServicesSection';
 import ReviewsSection from '../components/ReviewsSection';
 import ItineraryWizard from '../components/ItineraryWizard';
@@ -21,19 +22,22 @@ export default function Home() {
         {/* Full-Bleed Video Hero & Dedicated Stats Strip */}
         <Hero />
 
-        {/* Why Book With Us Section (Directly after Hero/Stats strip and before Destinations) */}
+        {/* Why Book With Us Section */}
         <WhyBookWithUs />
+
+        {/* Dedicated 3D Interactive Visa Services & Clearances Showcase */}
+        <VisaServicesSection />
+
+        {/* Multi-Day Signature Tour Packages */}
+        <PackagesSection />
 
         {/* Curated Destinations Section */}
         <DestinationsSection />
 
-        {/* Our Travel Partners Section (Directly after Destinations and before Packages) */}
+        {/* Our Travel Partners Section */}
         <PartnerLogoGrid />
 
-        {/* Multi-Day Signature Packages */}
-        <PackagesSection />
-
-        {/* Concierge Services */}
+        {/* Extended Concierge Services (Aviation, Stays, VIP Logistics) */}
         <ServicesSection />
 
         {/* Verified Traveler Reviews */}

@@ -24,6 +24,7 @@ import {
 
 const exploreLinks = [
   { name: 'About Us', href: '/about' },
+  { name: 'Fast-Track Visas [3D]', href: '/#visas' },
   { name: 'Signature Packages', href: '/#packages' },
   { name: 'Curated Destinations', href: '/#destinations' },
   { name: 'Concierge Services', href: '/#services' },

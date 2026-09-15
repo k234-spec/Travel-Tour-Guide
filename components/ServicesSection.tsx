@@ -153,6 +153,24 @@ export default function ServicesSection() {
     else window.location.href = '/#enquiry';
   };
 
+  const handleServiceClick = (svcId: string) => {
+    if (svcId === 'visa') {
+      const el = document.getElementById('visas');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
+    if (svcId === 'packages') {
+      const el = document.getElementById('packages');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
+    scrollToEnquiry();
+  };
+
   return (
     <section id="services" className="relative py-24 bg-slate-950/70 border-t border-slate-800/80">
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-sky-600/5 blur-[160px] pointer-events-none" />
@@ -263,8 +281,10 @@ export default function ServicesSection() {
                     <div className="w-12 h-12 rounded-xl bg-slate-950/90 border border-slate-800 flex items-center justify-center group-hover:scale-105 group-hover:border-sky-500/50 transition-all duration-200 shadow-inner">
                       <Icon className={`w-5 h-5 ${svc.iconColor}`} />
                     </div>
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-slate-400 group-hover:text-amber-400 transition-colors">
-                      Concierge
+                    <span className={`text-[10px] uppercase font-bold tracking-widest transition-colors ${
+                      svc.id === 'visa' ? 'text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded border border-amber-400/30' : 'text-slate-400 group-hover:text-amber-400'
+                    }`}>
+                      {svc.id === 'visa' ? 'Fast-Track 3D' : 'Concierge'}
                     </span>
                   </div>
                   <h3 className="text-lg font-bold text-white tracking-tight group-hover:text-sky-300 transition-colors">
@@ -276,7 +296,7 @@ export default function ServicesSection() {
                 </div>
                 <div className="pt-3 border-t border-slate-800/60">
                   <button
-                    onClick={scrollToEnquiry}
+                    onClick={() => handleServiceClick(svc.id)}
                     className="inline-flex items-center duration-200 bg-slate-800/90 hover:bg-slate-700/90 text-white border border-slate-700/80 rounded-xl h-9 px-3.5 gap-1.5 w-full text-xs justify-between group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:border-amber-400 transition-all cursor-pointer"
                   >
                     <span>{svc.ctaText}</span>

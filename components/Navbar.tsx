@@ -136,6 +136,15 @@ export default function Header() {
               </span>
             </Link>
             <Link
+              href="/#visas"
+              className="text-sm font-medium text-amber-300 hover:text-white transition-colors relative py-1 hover:after:w-full after:w-0 after:h-0.5 after:bg-amber-400 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-200 flex items-center gap-1.5"
+            >
+              <span>Visas</span>
+              <span className="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-1.5 py-0.5 rounded font-mono font-bold">
+                Fast Track
+              </span>
+            </Link>
+            <Link
               href="/#packages"
               className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative py-1 hover:after:w-full after:w-0 after:h-0.5 after:bg-amber-400 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-200 flex items-center gap-1.5"
             >
@@ -231,11 +240,21 @@ export default function Header() {
               </span>
             </Link>
             <Link
+              href="/#visas"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-base font-medium text-amber-300 hover:text-white transition-colors flex items-center justify-between py-2 border-b border-slate-900"
+            >
+              <span>Visa Services</span>
+              <span className="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded font-mono font-bold">
+                Fast Track
+              </span>
+            </Link>
+            <Link
               href="/#packages"
               onClick={() => setMobileMenuOpen(false)}
               className="text-base font-medium text-slate-200 hover:text-amber-300 transition-colors py-2 border-b border-slate-900"
             >
-              Packages
+              <span>Packages</span>
             </Link>
             <Link
               href="/#destinations"
